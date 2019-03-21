@@ -1,0 +1,410 @@
+
+/* margin for navbar height */
+  body {
+  margin-top: 56px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #740943;
+}
+
+p, h5, h6 {
+  font-family: 'Roboto', sans-serif;
+	font-weight: 500;
+	letter-spacing: 0.3px;
+	/* padding-top: 0.5rem; */
+  /* padding-left: 0.5rem; */
+  padding-right:
+}
+
+h1 {
+  text-align: center;
+  font-family: "Sedgwick Ave", cursive;
+}
+h2 {
+  padding-bottom: 1rem;
+  font-family: "Sedgwick Ave", cursive;
+}
+
+h3 {
+  text-align: left;
+}
+
+h4 {
+    font-family: "Sedgwick Ave", cursive;
+}
+
+.navbarCollapse {
+  color: red;
+}
+
+.lead {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+}
+
+/* .btn-primary btn: hover {
+  color: #fff;
+  background-color: #760843;
+  border-color: #DCDCDC;
+} */
+
+.btn-primary {
+  background-color: #760843;
+  color: white;
+  border: none;
+  padding: 0.5rem 0.5rem;  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 0;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open>.dropdown-toggle.btn-primary {
+    color: #fff;
+    background-color: #3B0421;;
+    border-color: #3B0421;; /*set the color you want here*/
+}
+
+
+
+/* rounded corner box */
+.rounded-box {
+  padding: 2rem;
+  margin: 0 0 1rem 0;
+  background-color: #DCDCDC;
+  border-radius: 0px 20px 0px 20px;
+}
+
+/* footer */
+.dark-footer {
+	background-color: #760843;
+	color: #eee;
+	padding: 1rem 0 2rem 0;
+	margin-top: 1rem;
+}
+.dark-footer a {
+	color: #ddd;
+	text-decoration: underline;
+}
+.dark-footer a:hover {
+	color: #bbb;
+	text-decoration: underline;
+}
+
+.resp-container {
+    position: relative;
+    overflow: hidden;
+    padding-top: 56.25%;
+    margin-bottom: 15px;
+}
+
+.resp-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.container {
+  padding-top: 0.2rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+
+.container2 {
+  padding-top: 1rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+
+.container3 {
+  padding-top: 5rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
+  padding-bottom: 1rem;
+  text-align: center;
+}
+
+.container3 h5 {
+  padding-top: 2rem;
+}
+
+.container p {
+  text-align: left;
+  font-weight: 300;
+  padding-top: 1rem;
+  line-height: 1.5rem;
+}
+
+.container a {
+  color: #760843;
+}
+
+a.button {
+  background-color: #760843;
+  color: white;
+  border: none;
+  padding: 0.5rem 0.5rem;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  width: 20%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom:5%;
+  margin-top: 3%;
+}
+
+button:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    background-color: #760843;
+
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.7;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+div.spacer {
+  padding: 0.8rem;
+}
+
+/* grid exmaples */
+.row-box {
+  margin-bottom: 0.5rem;
+  border-right: 0.5px solid #bbb;
+}
+.col-box {
+  padding: 1.0rem 1.5rem;
+  border-left: 0.5px solid #bbb;
+}
+.info-box {
+  background-color: #DCDCDC;
+  border-radius: 0rem 0rem 0rem 0rem;
+  padding: 1.1rem 1.5rem 0.2rem;
+}
+
+.info-box a {
+  color: #760843;
+}
+.spacer-1 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.spacer-1 a {
+  color: #760843;
+}
+
+.spacer-1 p, ul {
+  text-align: left;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+.spacer-2 {
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.info-box h4 {
+  font-family: 'Sedgwick Ave', cursive;
+}
+.top-row {
+  border-top: 0.5px solid #bbb;
+  border-right: 0.5px solid #bbb;
+  border-left: 0.5px solid #bbb;
+  padding: 1.2rem 2rem;
+}
+
+/* quote */
+.blockquote {
+  margin-bottom: 0;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+.blockquote-footer {
+  font-size: 70%;
+  color: #ffffff;
+}
+
+/* progress bar */
+.progress {
+  height: 14px;
+  border-radius: 0;
+  background-color: #dee3e8;
+  margin: 0.4rem 0 0.8rem;
+}
+
+/* sliderss */
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 14px;
+  background-color: #dee3e8;
+  outline: none;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 22px;
+  height: 14px;
+  border-radius: 4px;
+  background: #760843!important;
+  cursor: default;
+}
+.slider::-moz-range-thumb {
+  width: 22px;
+  height: 14px;
+  border-radius: 4px;
+  background: #760843!important;
+  cursor: default;
+}
+.quoteattribute {
+  font-size: 1rem;
+  text-align: center;
+}
+.quoteattribute a {
+  color: #760843;
+}
+
+.progress-bar-berry{
+  background-color: #760843;
+
+}
+
+form span {margin-bottom: 1em;}
+
+form span.fname, form span.lname {
+    width: 49%;
+    display: inline-block;
+}
+form span.phone, form span.phonetype, form span.phototype2 {
+    display: block;
+    }
+
+input [type=text] { width: 95%;}
+input [type=tel] {float:right; margin-right: 2.5%;}
+
+textarea {
+    width: 80%;
+    height: 10em;
+    margin-top: 1em;
+    input [type=submit] {color: blue:}
+
+.container-fluid {
+  height: 500px;
+  width: 100%;
+}
+
+@media (min-width: 992px) {
+  body {
+    padding-top: 56px;
+  }
+}

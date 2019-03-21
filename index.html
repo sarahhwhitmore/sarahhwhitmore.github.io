@@ -1,0 +1,938 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Sarah H. Whitmore</title>
+
+	<!-- Bootstrap CSS -->
+	<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css'>
+
+	<!-- My Website CSS -->
+	<link rel="stylesheet" href="css/my-website.css">
+
+	<!-- Mapbox GL CSS -->
+	<link href='https://cdnjs.cloudflare.com/ajax/libs/mapbox-gl/0.50.0/mapbox-gl.css' rel='stylesheet' />
+
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,900" rel="stylesheet">
+
+	<style>
+
+		#main {
+			margin-top:130px;
+		}
+
+		#map {
+			width: 100%;
+			height: 500px;
+		}
+
+		#features {
+			overflow-y: scroll;
+			overflow-x: hidden;
+			height: 500px;
+			border-left: none;
+		}
+
+		#p30 {
+			padding-bottom: 10%;
+		}
+
+		.btn:hover {
+			background-color: #3B0421;
+		}
+		section {
+			padding: 35px 45px 30px 45px;
+			line-height: 25px;
+			border-bottom: 1px solid #bbb;
+			background-color: #DCDCDC;
+			opacity: 0.4;
+		}
+
+		section.active {
+			opacity: 1;
+			background-color: #DCDCDC;
+		}
+
+		section:last-child {
+			border-bottom: none;
+			padding-bottom: 100px !important;
+		}
+	</style>
+</head>
+
+<body>
+	<!-- Fixed navbar -->
+	<header>
+		<nav class="navbar navbar-expand-md navbar-light fixed-top bg-light">
+			<a class="navbar-brand" href="#"></a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarCollapse">
+				<a class="logo" href="landing.html" class="navbar-left"><img src="images/S_logo.png" width="100px" height: "100%"></a>
+				<ul class="navbar-nav nav-pills ml-auto">
+					<li class="nav-item">
+						<a class="nav-link" href="landing.html">Home</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="about.html">About</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="photos.html">Photos</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="blog.html">Blog</a>
+					</li>
+					<li class="nav-item active">
+						<a class="nav-link" href="map.html">Map</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="contact.html">Contact</a>
+					</li>
+				</ul>
+
+			</div>
+		</nav>
+	</header>
+
+		<div id='main' class='container-fluid'>
+			<div class='row no-gutters'>
+				<div class='col-sm-8'>
+					<div id='map'></div>
+				</div>
+
+				<div class="col-sm-4">
+					<div>
+						<div id='features'>
+
+							<section id='p00' class='poi active'>
+								<h3>Making the Connection</h3>
+								<p class="lead">Explore all the locations I've traveled to during my time at Ohio University.</p>
+							</section>
+
+							<section id='p01' class='poi'>
+								<h3>Normandy Americannnnn Cemetery & Normandy Beach</h3>
+								<p class="lead">May 3, 2016</p>
+								<p>During my first trip across the Atlantic, I performed a patriotic mini-concert here with the Marching 110 at the end of my freshman year.</p>
+								<a href="#" class="btn btn-primary">Read more</a>
+							</section>
+
+							<section id='p02' class='poi'>
+								<h3>Eiffel Tower</h3>
+								<p class="lead">May 4, 2016</p>
+								<p>Our 2nd performance during the trip, the Marching 110 performed our standards at the foot of the Eiffel Tower. It was sort of like a flash mob since we just sorta showed up and started playing. I will never forget the faces of the
+									surprised locals and tourists alike who had never seen or heard anything like us.</p>
+								<img src="images/helleu.JPG" width="360px" height: "100%">
+							</section>
+
+							<section id='p03' class='poi'>
+								<h3>Disneyland Paris</h3>
+								<p class="lead">May 6, 2016</p>
+								<p>Not actually the happiest place on earth because there's crying kids everywhere, but for our third and final performance in France, the Marching 110 paraded through the park and stopped to perform full songs and dance breaks in front of
+									the castle and the park's main entrance.</p>
+								<img src="images/disneyland-paris.jpg" width="360px" height: "100%">
+							</section>
+
+							<section id='p04' class='poi'>
+								<h3>Cincinnati Bengals</h3>
+								<p>The Bengals love the 110. I'm pretty sure we've performed hafltime here every year I've been a member.</p>
+							</section>
+
+							<section id='p05' class='poi'>
+								<h3>Cleveland Browns</h3>
+								<p>Although they have yet to successfully feed 250 people all in one sitting, the Browns generally enjoy having the 110 visit and the fans are always full of energy.</p>
+							</section>
+
+							<section id='p06' class='poi'>
+								<h3>Dreamworks Collab</h3>
+								<p class="lead">July 29, 2016</p>
+								<p>One of the weirdest fun things I've ever done: a Trolls themed flash mob in the middle of downtown Cleveland. </p>
+								<a href="https://youtu.be/lWE1TfJV5Ms" class="btn btn-primary">Watch Video</a>
+							</section>
+
+							<section id='p07' class='poi'>
+								<h3>University of Tennessee</h3>
+								<p class="lead">September 17, 2016</p>
+								<p>Performed a country halftime show here, and the fans loved it! I can say I've line danced in Tennessee now. </p>
+							</section>
+
+							<section id='p08' class='poi'>
+								<h3>MAC Championship</h3>
+								<p>Cheered on the Bobcats at Ford Field in Detroit. </p>
+							</section>
+
+							<section id='p09' class='poi'>
+								<h3>Dollar General Bowl</h3>
+								<p>Visited Mobile, marched in a Mardi Gras parade, and performed our Rocky halftime show. </p>
+							</section>
+
+							<section id='p10' class='poi'>
+								<h3>Carnegie Hall</h3>
+								<p>Left Athens at 5 a.m. on a Monday for an impromptu visit to NYC to see my classmates and professors perform on this famous stage. My band director Dr. Suk even invited me backstage after the show.</p>
+							</section>
+
+							<section id='p11' class='poi'>
+								<h3>Macy's Thanksgiving Day Parade</h3>
+								<p>THE place for marching bands. I finally got to perform in this famous parade at the end of my junior year in the Marching 110. The best day ever. </p>
+							</section>
+
+							<section id='p12' class='poi'>
+								<h3>Bahamas Bowl</h3>
+								<p>The band was able to take 80 upperclassmen to the Nassau to perform at the Bahamas Bowl. Essentially a free vacation. We got to stay on Paradise Island and spend all of our free time at Atlantis.</p>
+
+							</section>
+
+							<section id='p13' class='poi'>
+								<h3>University of Cincinnati</h3>
+								<p>A quick trip to Nippert Stadium to cheer on the Bobcats in their game against the Bearcats.</p>
+							</section>
+
+							<section id='p16' class='poi'>
+								<h3>#OUtoNYC, Spring Break Freshman Year</h3>
+								<p>Spent 4 days traveling to Manhattan with a group of other Bobcats, connecting with alumni and visiting some major tourist attractions.</p>
+							</section>
+
+							<section id='p17' class='poi'>
+								<h3>Birmingham</h3>
+								<p>A major stop on the Civil Rights Tour I took as a semester-long class during my sophomore year. Our group of students bussed through many historically significant places in the South, including Selma and Montgomery, Alabama, Meridian,
+									Mississippi, and Memphis, Tennessee. </p>
+							</section>
+
+							<section id='p19' class='poi'>
+								<h3>London</h3>
+								<p>My first experience living somewhere other than southeast Ohio. What a change. The beginning of my 3.5 months of European adventures.</p>
+							</section>
+
+							<section id='p20' class='poi'>
+								<h3>Rome</h3>
+								<p>My first time traveling completely alone. Rome was the perfect weekend getaway, with just enough to see in the short two days I had there. I learned a lot about myself here. </p>
+							</section>
+
+							<section id='p21' class='poi'>
+								<h3>Barcelona</h3>
+								<p>Another weekend trip to do some sightseeing, but this time I also met up with some Viscom friends before they headed off to a design conference in Pamplona. #BobcatsEverywhere!</p>
+							</section>
+
+							<section id='p22' class='poi'>
+								<h3>Prague</h3>
+								<p>The first stop on my spring break, Prague was full of unbelieveably old and beautiful architecture. </p>
+							</section>
+
+							<section id='p23' class='poi'>
+								<h3>Dresden</h3>
+								<p>A short stopover on our way up to Berlin, Dresden has a rich history, good food, and really nice people.</p>
+									<img src="images/dresden.jpg" width="360px" height: "100%">
+							</section>
+
+							<section id='p24' class='poi'>
+								<h3>Berlin</h3>
+								<p>Another stop during spring break, Berlin was the unexpected gem of my time in Europe. There was SO much to do here.</p>
+							</section>
+
+							<section id='p25' class='poi'>
+								<h3>Amsterdam</h3>
+								<p>Amsterdam was the most liberal, free-flowing, laid back place I've ever visited. The flowers are just as beautiful as you'd expect. All their food was amazing – stroopwaffels have my heart forever. </p>
+							</section>
+
+							<section id='p26' class='poi'>
+								<h3>Oxford</h3>
+								<p>The city I found to have the most interesting history, Oxford is full of some of the most beautiful architecture in the world, and lots of Harry Potter filming locations.</p>
+							</section>
+
+							<section id='p27' class='poi'>
+								<h3>Liverpool</h3>
+								<p>Beatles Mania is all year 'round here. If you grew up listing to them like I did, you'll definitely enjoy visiting the locations that inspired so many iconic Beatles songs. </p>
+							</section>
+
+							<section id='p28' class='poi'>
+								<h3>Stratford-upon-Avon</h3>
+								<p>Beatles : Liverpool, Shakespeare : Stratford-upon-Avon. Here you can still visit the very room where Shakespeare was born and the rest of the house where he grew up. There are actors out in the garden who perform excerpts of every one of
+									his plays upon request from the passersby.</p>
+							</section>
+
+							<section id='p29' class='poi'>
+								<h3>Rice University</h3>
+								<p>My first internship location of summer 2018, Rice University is a beautiful campus lined with super shady trees that outnumber the university's undergraduate population. </p>
+								<img src="images/rice.jpg" width="360px" height: "100%">
+							</section>
+
+							<section id='p30' class='poi'>
+								<h3>University of Washington</h3>
+								<p>I could see Mount Rainier from my office, and the Space Needle from my bedroom. Working in Seattle was absolutely beautiful!</p>
+								<img src="images/sarah-helicopter.jpg" width="360px" height: "100%">
+							</section>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--  Footer -->
+		<footer class="dark-footer">
+			<div class="container2">
+				<div class="row">
+					<div class="col">
+						<p>Sarah H. Whitmore © 2018</p>
+					</div>
+					<div class="col">
+						<p class="float-right">
+							<a href="#">Back to top</a>
+						</p>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<!-- JavaScript: first jQuery, then Popper.js, then Bootstrap JS -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+		<!-- Mapbox GL -->
+		<script src='https://cdnjs.cloudflare.com/ajax/libs/mapbox-gl/0.50.0/mapbox-gl.js'></script>
+
+		<!-- Custom JavaScript -->
+		<script>
+			// Mapbox access token
+			mapboxgl.accessToken = 'pk.eyJ1Ijoic3c5OTM2MTQiLCJhIjoiY2psZHV6N3AyMGZjYjNxbHNtang5bHVtbCJ9.kQgnSzd-3XEtJwSlbljuBQ';
+
+			var map = new mapboxgl.Map({
+				container: 'map',
+				style: 'mapbox://styles/sw993614/cjmuohtrg3i212rmos5neej4l',
+				center: [-53.708, 37.679],
+				zoom: 1.68
+			});
+
+			// geojson locations for the map with type of icon
+			var locations = {
+				"type": "FeatureCollection",
+				"features": [{
+						"type": "Feature",
+						"geometry": {
+							"type": "Point",
+							"coordinates": [4.9003282, 52.3701672]
+						},
+						"properties": {
+							"id": "p01",
+							"icon": "dot1",
+							"name": "Amsterdam"
+						}
+					},
+					{
+						"type": "Feature",
+						"geometry": {
+							"type": "Point",
+							"coordinates": [2.1727416, 41.3945418]
+						},
+						"properties": {
+							"id": "p02",
+							"icon": "dot1",
+							"name": "Barcelona"
+						}
+					},
+					{
+						"type": "Feature",
+						"geometry": {
+							"type": "Point",
+							"coordinates": [13.4006442, 52.5211144]
+						},
+						"properties": {
+							"id": "p03",
+							"icon": "dot1",
+							"name": "Berlin"
+						}
+					},
+					{
+						"type": "Feature",
+						"geometry": {
+							"type": "Point",
+							"coordinates": [-86.81537, 33.5163826]
+						},
+						"properties": {
+							"id": "p04",
+							"icon": "dot1",
+							"name": "Birmingham"
+						}
+					},
+					{
+						"type": "Feature",
+						"geometry": {
+							"type": "Point",
+							"coordinates": [-73.97992642267465, 40.764925414118096]
+						},
+						"properties": {
+							"id": "p05",
+							"icon": "dot1",
+							"name": "Carnegie Hall"
+						}
+					},
+					{
+						"type": "Feature",
+						"geometry": {
+							"type": "Point",
+							"coordinates": [-84.5182517, 39.0954576]
+						},
+						"properties": {
+							"id": "p06",
+							"icon": "dot1",
+							"name": "Cincinnati Bengals"
+						}
+					},
+					{
+						"type": "Feature",
+						"geometry": {
+							"type": "Point",
+							"coordinates": [-81.7017421, 41.5060535]
+						},
+						"properties": {
+							"id": "p07",
+							"icon": "dot1",
+							"name": "Cleveland Browns"
+						}
+					},
+					{
+						"type": "Feature",
+						"geometry": {
+							"type": "Point",
+							"coordinates": [-81.6921131, 41.4983044]
+						},
+						"properties": {
+							"id": "p08",
+							"icon": "dot1",
+							"name": "DreamWorks Collab"
+						}
+					},
+					{
+						"type": "Feature",
+						"geometry": {
+							"type": "Point",
+							"coordinates": [2.7816325, 48.8671769]
+						},
+						"properties": {
+							"id": "p10",
+							"icon": "dot1",
+							"name": "Disneyland Paris"
+						}
+					},
+					{
+						"type": "Feature",
+						"geometry": {
+							"type": "Point",
+							"coordinates": [13.7369061, 51.0513593]
+						},
+						"properties": {
+							"id": "p11",
+							"icon": "dot1",
+							"name": "Dresden"
+						}
+					},
+					{
+						"type": "Feature",
+						"geometry": {
+							"type": "Point",
+							"coordinates": [2.2979122, 48.8552808]
+						},
+						"properties": {
+							"id": "p12",
+							"icon": "dot1",
+							"name": "Eiffel Tower"
+						}
+					},
+					{
+						"type": "Feature",
+						"geometry": {
+							"type": "Point",
+							"coordinates": [-95.39881188440081, 29.71852428333969]
+						},
+						"properties": {
+							"id": "p14",
+							"icon": "dot1",
+							"name": "Rice University"
+						}
+					},
+					{
+						"type": "Feature",
+						"geometry": {
+							"type": "Point",
+							"coordinates": [-83.9271875, 35.9548981]
+						},
+						"properties": {
+							"id": "p15",
+							"icon": "dot1",
+							"name": "University of Tennessee"
+						}
+					},
+					{
+						"type": "Feature",
+						"geometry": {
+							"type": "Point",
+							"coordinates": [-2.9926665, 53.4059407]
+						},
+						"properties": {
+							"id": "p16",
+							"icon": "dot1",
+							"name": "Liverpool"
+						}
+					},
+					{
+						"type": "Feature",
+						"geometry": {
+							"type": "Point",
+							"coordinates": [-0.1339258, 51.5214265]
+						},
+						"properties": {
+							"id": "p17",
+							"icon": "dot1",
+							"name": "London"
+						}
+					},
+					{
+						"type": "Feature",
+						"geometry": {
+							"type": "Point",
+							"coordinates": [-73.9916722, 40.7508025]
+						},
+						"properties": {
+							"id": "p18",
+							"icon": "dot1",
+							"name": "Thanksgiving Day Parade"
+						}
+					},
+					{
+						"type": "Feature",
+						"geometry": {
+							"type": "Point",
+							"coordinates": [-88.0763326, 30.6729438]
+						},
+						"properties": {
+							"id": "p19",
+							"icon": "dot1",
+							"name": "Dollar General Bowl"
+						}
+					},
+					{
+						"type": "Feature",
+						"geometry": {
+							"type": "Point",
+							"coordinates": [-83.0461565, 42.3399785]
+						},
+						"properties": {
+							"id": "p20",
+							"icon": "dot1",
+							"name": "MAC Championship"
+						}
+					},
+					{
+						"type": "Feature",
+						"geometry": {
+							"type": "Point",
+							"coordinates": [-77.31813133212552, 25.08090058262634]
+						},
+						"properties": {
+							"id": "p21",
+							"icon": "dot1",
+							"name": "Bahamas Bowl"
+						}
+					},
+					{
+						"type": "Feature",
+						"geometry": {
+							"type": "Point",
+							"coordinates": [-0.8532904, 49.3592938]
+						},
+						"properties": {
+							"id": "p22",
+							"icon": "dot1",
+							"name": "Normandy"
+						}
+					},
+					{
+						"type": "Feature",
+						"geometry": {
+							"type": "Point",
+							"coordinates": [-73.968847, 40.798684]
+						},
+						"properties": {
+							"id": "p23",
+							"icon": "dot1",
+							"name": "#OUinNYC"
+						}
+					},
+					{
+						"type": "Feature",
+						"geometry": {
+							"type": "Point",
+							"coordinates": [-1.2556407, 51.7537292]
+						},
+						"properties": {
+							"id": "p24",
+							"icon": "dot1",
+							"name": "Oxford"
+						}
+					},
+					{
+						"type": "Feature",
+						"geometry": {
+							"type": "Point",
+							"coordinates": [14.4109254, 50.0796007]
+						},
+						"properties": {
+							"id": "p25",
+							"icon": "dot1",
+							"name": "Prague"
+						}
+					},
+					{
+						"type": "Feature",
+						"geometry": {
+							"type": "Point",
+							"coordinates": [12.4743862, 41.8966182]
+						},
+						"properties": {
+							"id": "p26",
+							"icon": "dot1",
+							"name": "Rome"
+						}
+					},
+					{
+						"type": "Feature",
+						"geometry": {
+							"type": "Point",
+							"coordinates": [-122.3057139, 47.6553351]
+						},
+						"properties": {
+							"id": "p27",
+							"icon": "dot1",
+							"name": "University of Washington"
+						}
+					},
+					{
+						"type": "Feature",
+						"geometry": {
+							"type": "Point",
+							"coordinates": [-1.7041177, 52.1894456]
+						},
+						"properties": {
+							"id": "p28",
+							"icon": "dot1",
+							"name": "Stratford-upon-Avon"
+						}
+					},
+					{
+						"type": "Feature",
+						"geometry": {
+							"type": "Point",
+							"coordinates": [-84.5171444, 39.1329219]
+						},
+						"properties": {
+							"id": "p29",
+							"icon": "dot1",
+							"name": "University of Cincinnati"
+						}
+					}
+				]
+			};
+
+			map.on('load', function() {
+
+				// add zoom and rotation controls to the map.
+				map.addControl(new mapboxgl.NavigationControl());
+
+				// show lat, lng for clicked location in console
+				// map.on('click', function(e) {
+				// 	console.log('map zoom', map.getZoom());
+				// 	console.log('map center', map.getCenter().lng + ', ' + map.getCenter().lat);
+				// 	console.log('click loc', e.lngLat.lng + ', ' + e.lngLat.lat);
+				// });
+
+				// add geojson layer and style layout for the location icons
+				map.addLayer({
+					"id": "points",
+					"type": "symbol",
+					"source": {
+						"type": "geojson",
+						"data": locations
+					},
+					"layout": {
+						"icon-image": "{icon}-01",
+						"icon-size": 1.5,
+						"text-field": "{name}",
+						"text-font": ["Open Sans Semibold", "Arial Unicode MS Bold"],
+						"text-offset": [0, 0.8],
+						"text-anchor": "top",
+						"icon-allow-overlap": true,
+						"icon-ignore-placement": true
+					}
+				});
+			});
+
+			// data for the flyto
+			var poi = {
+				'p00': {
+					center: [-82.0809, 39.3361],
+					bearing: 0,
+					zoom: 2.5,
+					pitch: 20
+				},
+				'p01': {
+					name: 'Normandy',
+					center: [-0.8594564, 49.3602116],
+					bearing: 0,
+					zoom: 13,
+					pitch: 10,
+					duration: 4000
+				},
+				'p02': {
+					name: 'Eiffel Tower',
+					center: [2.2979122, 48.8552808],
+					bearing: 0,
+					zoom: 14,
+					pitch: 10,
+					duration: 4000
+				},
+				'p03': {
+					name: 'Disneyland Paris',
+					center: [2.7816325, 48.8671769],
+					bearing: 0,
+					zoom: 14,
+					pitch: 20,
+					duration: 4000
+				},
+				'p04': {
+					name: 'Cincinnati Bengals',
+					center: [-84.5182517, 39.0954576],
+					bearing: 0,
+					zoom: 16,
+					pitch: 20,
+					duration: 4000
+				},
+				'p05': {
+					name: 'Cleveland Browns',
+					center: [-81.7017421, 41.5060535],
+					bearing: 0,
+					zoom: 16,
+					pitch: 20,
+					duration: 4000
+				},
+				'p06': {
+					name: 'Cleveland Trolls',
+					center: [-81.6921131, 41.4983044],
+					bearing: 0,
+					zoom: 16,
+					pitch: 20,
+					duration: 4000
+				},
+				'p07': {
+					name: 'University of Tennessee',
+					center: [-83.9271875, 35.9548981],
+					bearing: 0,
+					zoom: 16,
+					pitch: 20,
+					duration: 4000
+				},
+				'p08': {
+					name: 'MAC Championship',
+					center: [-83.0461565, 42.3399785],
+					bearing: 0,
+					zoom: 16,
+					pitch: 20,
+					duration: 4000
+				},
+				'p09': {
+					name: 'Dollar General Bowl',
+					center: [-88.0763326, 30.6729438],
+					bearing: 0,
+					zoom: 16,
+					pitch: 20,
+					duration: 4000
+				},
+				'p10': {
+					name: 'Carnegie Hall',
+					center: [-73.97992642267465, 40.764925414118096],
+					bearing: 0,
+					zoom: 16,
+					pitch: 20,
+					duration: 4000
+				},
+				'p11': {
+					name: 'Macys Thanksgiving Day Parade',
+					center: [-73.9916722, 40.7508025],
+					bearing: 0,
+					zoom: 16,
+					pitch: 20,
+					duration: 4000
+				},
+				'p12': {
+					name: 'Bahamas Bowl',
+					center: [-77.31813133212552, 25.08090058262634],
+					bearing: 0,
+					zoom: 12,
+					pitch: 20,
+					duration: 4000
+				},
+				'p13': {
+					name: 'University of Cincinnati',
+					center: [-84.5171444, 39.1329219],
+					bearing: 0,
+					zoom: 16,
+					pitch: 20,
+					duration: 4000
+				},
+				'p16': {
+					name: '#OUtoNYC',
+					center: [-73.968847, 40.798684],
+					bearing: 0,
+					zoom: 16,
+					pitch: 20,
+					duration: 4000
+				},
+				'p17': {
+					name: '#OUCivilRide',
+					center: [-86.81537, 33.5163826],
+					bearing: 0,
+					zoom: 11,
+					pitch: 20,
+					duration: 4000
+				},
+				'p19': {
+					name: 'London',
+					center: [-0.1317932, 51.5214294],
+					bearing: 0,
+					zoom: 12,
+					pitch: 20,
+					duration: 4000
+				},
+				'p20': {
+					name: 'Rome',
+					center: [12.4743862, 41.8966182],
+					bearing: 0,
+					zoom: 13,
+					pitch: 20,
+					duration: 4000
+				},
+				'p21': {
+					name: 'Barcelona',
+					center: [2.1727416, 41.3945418],
+					bearing: 0,
+					zoom: 12,
+					pitch: 20,
+					duration: 4000
+				},
+				'p22': {
+					name: 'Prague',
+					center: [14.4109254, 50.0796007],
+					bearing: 0,
+					zoom: 13,
+					pitch: 20,
+					duration: 4000
+				},
+				'p23': {
+					name: 'Dresden',
+					center: [13.7369061, 51.0513593],
+					bearing: 0,
+					zoom: 12,
+					pitch: 20,
+					duration: 4000
+				},
+				'p24': {
+					name: 'Berlin',
+					center: [13.4006442, 52.5211144],
+					bearing: 0,
+					zoom: 10,
+					pitch: 20,
+					duration: 4000
+				},
+				'p25': {
+					name: 'Amsterdam',
+					center: [4.9003282, 52.3701672],
+					bearing: 0,
+					zoom: 12,
+					pitch: 20,
+					duration: 4000
+				},
+				'p26': {
+					name: 'Oxford',
+					center: [-1.2556407, 51.7537292],
+					bearing: 0,
+					zoom: 11,
+					pitch: 20,
+					duration: 4000
+				},
+				'p27': {
+					name: 'Liverpool',
+					center: [-2.9926665, 53.4059407],
+					bearing: 0,
+					zoom: 13,
+					pitch: 20,
+					duration: 4000
+				},
+				'p28': {
+					name: 'Stratford-upon-Avon',
+					center: [-1.7041177, 52.1894456],
+					bearing: 0,
+					zoom: 10.5,
+					pitch: 20,
+					duration: 4000
+				},
+				'p29': {
+					name: 'Rice University',
+					center: [-95.39881188440081, 29.71852428333969],
+					bearing: 0,
+					zoom: 13,
+					pitch: 20,
+					duration: 4000
+				},
+				'p30': {
+					name: 'University of Washington',
+					center: [-122.3057139, 47.6553351],
+					bearing: 0,
+					zoom: 13,
+					pitch: 20,
+					duration: 4000
+				}
+			};
+
+			var activePoiName = 'p00';
+			var poiNames = Object.keys(poi);
+			var $features = $('#features');
+			var $poi = $('.poi');
+			var offset = 126;
+
+			var setActiveChapter = function(poiName) {
+				console.log(poiName);
+				if (poiName === activePoiName) return;
+				map.flyTo(poi[poiName]);
+				//
+				$poi.removeClass('active');
+				$('#' + poiName).addClass('active');
+				activePoiName = poiName;
+			};
+
+			var isElementOnScreen = function(id) {
+				var element = $('#' + id);
+				var bounds = element[0].getBoundingClientRect();
+				return bounds.top < (window.innerHeight - offset) && bounds.bottom > offset;
+			};
+
+			var checkScroll = function() {
+				for (var i = 0; i < poiNames.length; i++) {
+					var poiName = poiNames[i];
+					if (isElementOnScreen(poiName)) {
+						setActiveChapter(poiName);
+						break;
+					}
+				}
+			};
+
+			$features.scroll(checkScroll);
+		</script>
+
+</body>
+
+</html>
